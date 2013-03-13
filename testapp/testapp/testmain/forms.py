@@ -87,6 +87,12 @@ class EmployeeForm(forms.ModelForm):
     class Meta:
         model = Employee
 
+class EmployeeAdminForm(forms.ModelForm):
+    word = WordChoices(queryset=Word.objects)
+    
+    class Meta:
+        model = Employee
+
 class DeptForm(forms.ModelForm):
     allotted_rooms = ClassRoomChoices()
     allotted_labs = ModelSelect2MultipleField(queryset=Lab.objects, required=False)

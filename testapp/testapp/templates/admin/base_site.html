@@ -1,0 +1,17 @@
+﻿{% extends "admin/base.html" %}
+{% load i18n %}
+{% load django_select2_tags %}
+
+{% block extrastyle %}
+	<script src="{{ STATIC_URL }}jquery-1.7.2.min.js"></script>
+	{% import_django_select2_js %}
+	{% import_django_select2_css %}
+{% endblock %}
+
+{% block title %}{{ title }} | {{ site_name }} {% endblock %}
+
+{% block branding %}
+<h1 id="site-name">Django administration</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
